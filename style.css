@@ -1,0 +1,230 @@
+:root {
+    --strongCyan: rgb(38, 192, 171);
+    --veryDarkCyan: rgb(0, 73, 77);
+    --darkGrayishCyan: rgb(94, 122, 125);
+    --darkGrayish: rgb(127, 156, 159);
+    --lightGrayishCyan: rgb(197, 228, 231);
+    --lightGrayishCyan: rgb(244, 250, 250);
+    --white: rgb(255, 255, 255);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Space Mono', monospace;
+    background: var(--strongCyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.bg-top {
+    background-image: url(images/logo.svg);
+    width: 87px;
+    height: 54px;
+    background-repeat: no-repeat;
+    padding-bottom: 15vh ;
+}
+h3 {
+    letter-spacing: 1px;
+    color: var(--darkGrayishCyan);
+}
+h4 {
+    color: var(--white);
+    font-size: 20px;
+    position: relative;
+    bottom: -5px;
+}
+p {
+    font-size: 24px;
+}
+.card {
+    width: 64%;
+    height: 54vh;
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+section {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.h3-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hiden-message {
+    color: rgb(255, 103, 65);
+    font-size: 16px;
+    display: none;
+}
+.hiden-message.active {
+    display: block;
+}
+input {
+    display: flex;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    background: var(--lightGrayishCyan);
+    font-size: 26px;
+    line-height: 42px;
+    padding: 5px 15px;
+    width: 100%;
+    color: var(--veryDarkCyan);
+    font-weight: 700;
+    cursor: pointer;
+}
+input:focus {
+    outline: 1px solid var(--strongCyan);
+}
+input::placeholder {
+    color: var(--darkGrayish);
+    font-weight: 700;
+    font-size: 26px;
+    font-family: 'Space Mono', monospace;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.form {
+    display: flex;
+    align-items: center;
+}
+.dolar {
+    background-image: url(images/icon-dollar.svg);
+    position: absolute;
+    margin-left: 2%;
+    width: 11px;
+    height: 17px;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+button {
+    width: 31%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.btn-gray {
+    margin: 5px 0;
+    width: 31%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background: var(--lightGrayishCyan);
+}
+.btn-gray::placeholder {
+    text-align: center;
+}
+.btn-green {
+    background: var(--veryDarkCyan);
+    color: var(--white);
+}
+.btn-green:hover {
+    background: var(--strongCyan);
+    color: var(--veryDarkCyan);
+}
+.btn-darkGreen {
+    background: rgb(13, 104, 109);
+    color: var(--veryDarkCyan);
+    width: 100%;
+}
+.btn-darkGreen:hover {
+    background: var(--strongCyan);
+}
+/************
+rigth side
+************/
+section:last-child {
+    background: var(--veryDarkCyan);
+    border-radius: 15px;
+    padding: 4vh 4% 2vh 4%;
+}
+.right-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.numbers h5 {
+    color: var(--strongCyan);
+    font-size: 50px;
+}
+.right-text p {
+    font-size: 16px;
+    color: var(--darkGrayishCyan);
+    font-weight: 700;
+}
+/*******************
+responsive for ipad
+*******************/
+@media (max-width:1200px) {
+    .card {
+        width: 90%;
+        height: 66vh;
+    }
+}
+/*******************
+responsive for mob
+*******************/
+@media (max-width:767px) {
+    body {
+        height: auto;
+    }
+    .bg-top {
+        padding-bottom: 0;
+        margin: 2vh;
+    }
+    .card {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    section {
+        width: 100%;
+    }
+    button,
+    .btn-gray {
+        width: 48%;
+        height: 46px;
+    }
+    input {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+}
+@media (max-width:300px) {
+    input::placeholder {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    .numbers h5 {
+        font-size: 32px;
+    }
+    .right-text p {
+        font-size: 14px;
+    }
+}

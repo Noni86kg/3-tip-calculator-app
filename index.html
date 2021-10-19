@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <div class="bg-top"></div>
+  <div class="card">
+    <section>
+      <div class="h3-message">
+        <h3>Bill</h3>
+        <p class="hiden-message mess1">
+          Can't be zero
+        </p>
+      </div>
+
+      <div class="form">
+        <input type="number" class="bill" placeholder='0'>
+        <div class="dolar"></div>
+      </div>
+
+      <h3>Select Tip %</h3>
+      <div class="buttons">
+        <button class="btn-green" value="5">5%</button>
+        <button class="btn-green" value="10">10%</button>
+        <button class="btn-green" value="15">15%</button>
+        <button class="btn-green" value="25">25%</button>
+        <button class="btn-green" value="50">50%</button>
+        <input type="number" class="btn-gray" placeholder="Custom">
+      </div>
+      <div class="h3-message">
+        <h3>Number of People</h3>
+        <p class="hiden-message mess2">
+          Can't be zero
+        </p>
+      </div>
+      <div class="form">
+        <input type="number" class="num-of-people" placeholder='0'>
+        <div class="dolar"></div>
+      </div>
+    </section>
+
+    <!-- right -->
+    <section>
+      <div>
+        <div class="right-top">
+          <div class="right-text">
+            <h4>Tip Amount</h4>
+            <p>/ person</p>
+          </div>
+          <div class="numbers num-top">
+            <h5 id="tip-amount">$0.00</h5>
+          </div>
+        </div>
+  
+        <div class="right-top">
+          <div class="right-text">
+            <h4>Total</h4>
+            <p>/ person</p>
+          </div>
+          <div class="numbers num-midle">
+            <h5 id="total">$0.00</h5>
+          </div>
+      </div>
+      </div>
+
+      <button class="btn-darkGreen">RESET</button>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
